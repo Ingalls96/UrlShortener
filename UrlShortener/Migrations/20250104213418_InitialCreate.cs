@@ -17,7 +17,7 @@ namespace UrlShortener.Migrations
                 {
                     Id = table.Column<string>(type: "TEXT", nullable: false),
                     LongUrl = table.Column<string>(type: "TEXT", nullable: false),
-                    ShortUrl = table.Column<string>(type: "TEXT", nullable: false),
+                    ShortUrl = table.Column<string>(type: "TEXT", nullable: true),
                     GeneratedDate = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

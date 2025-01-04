@@ -162,6 +162,7 @@ C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\UrlShortener.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\UrlShortener.RazorAssemblyInfo.cache
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\UrlShortener.RazorAssemblyInfo.cs
+C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\UrlShortener.sourcelink.json
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\scopedcss\bundle\UrlShortener.styles.css
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\scopedcss\projectbundle\UrlShortener.bundle.scp.css

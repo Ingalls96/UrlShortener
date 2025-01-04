@@ -30,7 +30,6 @@ namespace UrlShortener.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ShortUrl")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

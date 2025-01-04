@@ -29,8 +29,8 @@ public class HomeController : Controller
     public async Task<IActionResult> ShortenUrl(Url model)
     {
         // Explicitly clear out Id and ShortUrl before processing
-        model.Id = null;
-        model.ShortUrl = null;
+        //model.Id = null;
+        //model.ShortUrl = null;
 
         // Log the ModelState validity
         _logger.LogInformation($"ModelState is valid: {ModelState.IsValid}");
@@ -54,13 +54,13 @@ public class HomeController : Controller
             model.ShortUrl = $"https://short.ly/{model.Id}";
             model.GeneratedDate = DateTime.Now;
 
+            //Save URL to database
+            _context.Add(model);
+            await _context.SaveChangesAsync();
+
             _logger.LogInformation($"Generated ShortUrl: {model.ShortUrl}");
-            var newUrl = await _context.Url.FirstOrDefaultAsync();
-            if (newUrl == null)
-            {
-                return NotFound();
-            }
-            return View("Index", newUrl);  // Return the model with the generated short URL
+
+            return View("Index", model);  // Return the model with the generated short URL
         }
 
         // Log a warning and return the model if there is an issue

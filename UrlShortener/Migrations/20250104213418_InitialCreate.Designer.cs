@@ -11,7 +11,7 @@ using UrlShortener.Data;
 namespace UrlShortener.Migrations
 {
     [DbContext(typeof(MvcUrlContext))]
-    [Migration("20250104004313_InitialCreate")]
+    [Migration("20250104213418_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -33,7 +33,6 @@ namespace UrlShortener.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ShortUrl")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
