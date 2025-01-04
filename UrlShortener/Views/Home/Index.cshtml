@@ -1,0 +1,19 @@
+﻿@model UrlShortener.Models.Url
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form method="Post" action="/Home/ShortenUrl">
+        <h1 for="LongUrl">Shorten Url Here: </h1>
+        <input type="text" asp-for="LongUrl" class="form-control" />
+        <button type="submit" class="btn btn-primary">Shorten!</button>
+        <h4>
+        @if (Model != null && !string.IsNullOrEmpty(Model.ShortUrl))
+        {
+            <p>Shortened Url: <a href="@Model.LongUrl" target="_blank">@Model.ShortUrl</a></p>
+        }
+        </h4>
+    </form>
+</div>
