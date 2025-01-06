@@ -14,6 +14,9 @@ else
         options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionMvcUrlContext")));
 }
 
+//Seed Default User
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

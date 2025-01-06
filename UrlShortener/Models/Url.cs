@@ -12,4 +12,6 @@ public class Url
     public string? ShortUrl { get; set; }  // No Required attribute
 
     public DateTime GeneratedDate { get; set; }
+
+    public string? SiteUserId {get; set;}
 }
