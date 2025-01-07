@@ -7,11 +7,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.WebEncoders.Testing;
 using UrlShortener.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using UrlShortener.Models.Identity;
 
 namespace UrlShortener.Data
 {
-    public class MvcUrlContext : DbContext
+    public class MvcUrlContext : IdentityDbContext<SiteUser>
     {
         public MvcUrlContext (DbContextOptions<MvcUrlContext> options)
             : base(options)
@@ -27,7 +28,6 @@ namespace UrlShortener.Data
         //     base.OnModelCreating(model);
 
         //     model.Entity<IdentityUserRole<string>>()
-        //         .HasNoKey()
         //         .HasIndex(r => r.UserId)
         //         .IsUnique(false);
             

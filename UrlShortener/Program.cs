@@ -1,5 +1,8 @@
+using BlogApp.Data.Config;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UrlShortener.Data;
+using UrlShortener.Models.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +17,12 @@ else
         options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionMvcUrlContext")));
 }
 
-//Seed Default User
-
+//Register ASP.NET Core Identity services
+builder.Services.AddIdentity<SiteUser, IdentityRole>(options => {
+    options.Password.RequiredLength = 10;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireDigit = false;    
+}).AddEntityFrameworkStores<MvcUrlContext>().AddDefaultTokenProviders();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -33,9 +40,17 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
+
+//register the admin creation
+var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+using(var scope = scopeFactory.CreateScope())
+{
+    await AuthConfig.ConfigAdmin(scope.ServiceProvider);
+}
 
 app.MapControllerRoute(
     name: "default",

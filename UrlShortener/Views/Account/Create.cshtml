@@ -1,0 +1,63 @@
+@model UrlShortener.Models.Identity.SiteUser
+
+@{
+    ViewData["Title"] = "Create User";
+}
+
+<h1>Create User</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input type="text" class="form-control" id="FirstName" name="FirstName" value="@Model.FirstName" required />
+    </div>
+    <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input type="text" class="form-control" id="LastName" name="LastName" value="@Model.LastName" required />
+    </div>
+    <div class="form-group">
+        <label for="UserName">Username</label>
+        <input type="text" class="form-control" id="UserName" name="UserName" value="@Model.UserName" required />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required />
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" name="Password" required />
+        @if (ViewData.ModelState["Password"]?.Errors.Any() == true)
+        {
+            <div class="text-danger">
+                @foreach (var error in ViewData.ModelState["Password"]?.Errors)
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            </div>
+        }
+    </div>
+
+    <script>
+        document.getElementById('Password').addEventListener('input', function () {
+            var password = this.value;
+            var message = '';
+            var regexUpper = /[A-Z]/;
+            var regexDigit = /\d/;
+            var regexSpecial = /[^A-Za-z0-9]/;
+
+            if (password.length < 8) {
+                message = 'Password must be at least 8 characters long.';
+            } else if (!regexUpper.test(password)) {
+                message = 'Password must contain at least one uppercase letter.';
+            } else if (!regexDigit.test(password)) {
+                message = 'Password must contain at least one number.';
+            } else if (!regexSpecial.test(password)) {
+                message = 'Password must contain at least one special character.';
+            }
+
+            document.getElementById('password-error').innerText = message;
+        });
+    </script>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

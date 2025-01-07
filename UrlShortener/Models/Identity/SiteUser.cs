@@ -7,17 +7,17 @@ namespace UrlShortener.Models.Identity
     public class SiteUser : IdentityUser
     {
         [Key]
-        public override required string Id {get; set;}
+        public override string Id {get; set;}
 
         [Required]
         [EmailAddress]
-        public override required string Email {get; set;}
+        public override string? Email {get; set;}
 
-        public override required string UserName {get; set;}
+        public override string? UserName {get; set;}
 
-        public required string FirstName {get; set;}
+        public string? FirstName {get; set;}
 
-        public required string LastName {get; set;}
+        public string? LastName {get; set;}
 
         public ICollection<Url>? Links {get; set;}
  
