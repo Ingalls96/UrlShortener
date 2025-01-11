@@ -5,6 +5,9 @@ using SQLitePCL;
 using UrlShortener.Data;
 using UrlShortener.Models.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace UrlShortener.Controllers;
@@ -40,73 +43,115 @@ public class AccountController : Controller
     public async Task<IActionResult> Create(SiteUser newUser, string password)
     {
         if (ModelState.IsValid)
+        {
+            try
             {
-                try
+                var passwordValidationResult = ValidatePassword(password);
+                if (!passwordValidationResult.IsValid)
                 {
-                    var passwordValidationResult = ValidatePassword(password);
-                    if (!passwordValidationResult.IsValid)
+                    // Add password validation errors to ModelState
+                    foreach (var error in passwordValidationResult.Errors)
                     {
-                        // Add password validation errors to ModelState
-                        foreach (var error in passwordValidationResult.Errors)
-                        {
-                            ModelState.AddModelError("Password", error);
-                        }
-                        return View(newUser);
+                        ModelState.AddModelError("Password", error);
                     }
-
-                    var result = await _userManager.CreateAsync(newUser, password);
-
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction(nameof(UserList));
-                    }
-                    else
-                    {
-                        foreach (var error in result.Errors)
-                        {
-                            ModelState.AddModelError("", error.Description);
-                        }
-                    }
+                    return View(newUser);
                 }
-                catch (Exception ex)
+
+                var result = await _userManager.CreateAsync(newUser, password);
+
+                if (result.Succeeded)
                 {
-                    ModelState.AddModelError("", "Error creating user: " + ex.Message);
+                    return RedirectToAction(nameof(UserList));
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
                 }
             }
-            return View(newUser);
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Error creating user: " + ex.Message);
+            }
+        }
+        return View(newUser);
+    }
+
+    //GET: Login
+    public IActionResult Login()
+    {
+        return View(new Login());
+    }
+
+    //POST: Login
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(Login model)
+    {
+        if (ModelState.IsValid)
+        {
+            var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, false);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            ModelState.AddModelError("", "Invalid login attempt.");
+        }
+
+        return View(model);
+    }
+
+    // GET: Logout
+    [Authorize]
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Logout()
+    {
+        await _signInManager.SignOutAsync();
+        return RedirectToAction("Index", "Home");
+    }
+
+    //GET UserDetails page
+    public IActionResult UserDetails(SiteUser user)
+    {
+        return View();
     }
 
     // Password validation method
-        private (bool IsValid, List<string> Errors) ValidatePassword(string password)
+    private (bool IsValid, List<string> Errors) ValidatePassword(string password)
+    {
+        var errors = new List<string>();
+
+        // Check password length
+        if (password.Length < 8)
         {
-            var errors = new List<string>();
-
-            // Check password length
-            if (password.Length < 8)
-            {
-                errors.Add("Password must be at least 8 characters long.");
-            }
-
-            // Check for at least one uppercase letter
-            if (!password.Any(char.IsUpper))
-            {
-                errors.Add("Password must contain at least one uppercase letter.");
-            }
-
-            // Check for at least one digit
-            if (!password.Any(char.IsDigit))
-            {
-                errors.Add("Password must contain at least one number.");
-            }
-
-            // Check for at least one special character
-            if (!password.Any(c => !char.IsLetterOrDigit(c)))
-            {
-                errors.Add("Password must contain at least one special character.");
-            }
-
-            return (errors.Count == 0, errors);
+            errors.Add("Password must be at least 8 characters long.");
         }
+
+        // Check for at least one uppercase letter
+        if (!password.Any(char.IsUpper))
+        {
+            errors.Add("Password must contain at least one uppercase letter.");
+        }
+
+        // Check for at least one digit
+        if (!password.Any(char.IsDigit))
+        {
+            errors.Add("Password must contain at least one number.");
+        }
+
+        // Check for at least one special character
+        if (!password.Any(c => !char.IsLetterOrDigit(c)))
+        {
+            errors.Add("Password must contain at least one special character.");
+        }
+
+        return (errors.Count == 0, errors);
+    }
 
 
 }

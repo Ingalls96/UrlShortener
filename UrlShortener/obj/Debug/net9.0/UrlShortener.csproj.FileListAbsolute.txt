@@ -167,7 +167,6 @@ C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\scopedcss\bundle\UrlShortener.styles.css
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\scopedcss\projectbundle\UrlShortener.bundle.scp.css
-C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\compressed\ieigs3r9h7-iix1evx5fh.gz
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\compressed\ug7ij1l5t8-61n19gt1b8.gz
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\compressed\wyw707wmmd-xtxxf3hu2r.gz
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\compressed\1jlct2qhmb-bqjiyaj88i.gz
@@ -246,3 +245,4 @@ C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\UrlShortener.pdb
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\UrlShortener.genruntimeconfig.cache
 C:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\ref\UrlShortener.dll
+c:\Users\Ingal\OneDrive\Desktop\Dev\ASP.NET\UrlShortener\UrlShortener\obj\Debug\net9.0\compressed\ieigs3r9h7-0kj2jxf9pr.gz

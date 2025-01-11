@@ -19,7 +19,7 @@ namespace UrlShortener.Models.Identity
 
         public string? LastName {get; set;}
 
-        public ICollection<Url>? Links {get; set;}
+        public ICollection<Url>? Links {get; set;} = new List<Url>();
  
     }
 }

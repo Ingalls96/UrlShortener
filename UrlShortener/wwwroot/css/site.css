@@ -61,6 +61,16 @@ h4
   border-color: rgb(0, 0, 0) !important;
 }
 
+.btn-login
+{
+  color: #E6E6E6 !important;
+  background-color: black;
+}
+.btn-login:hover
+{
+  color: black !important;
+}
+
 .btn-primary
 {
   margin: 10px;

@@ -7,9 +7,9 @@ public class Url
 
     [Required]
     [Url]
-    public string? LongUrl { get; set; }  // Required for user input
+    public string? LongUrl { get; set; }  
 
-    public string? ShortUrl { get; set; }  // No Required attribute
+    public string? ShortUrl { get; set; }  
 
     public DateTime GeneratedDate { get; set; }
 
