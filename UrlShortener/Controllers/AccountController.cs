@@ -116,9 +116,21 @@ public class AccountController : Controller
     }
 
     //GET UserDetails page
-    public IActionResult UserDetails(SiteUser user)
+    [HttpGet]
+    public async Task<IActionResult> UserDetails(string id)
     {
-        return View();
+        if (string.IsNullOrEmpty(id))
+        {
+            return NotFound();
+        }
+
+        var user = await _context.Users
+            .FirstOrDefaultAsync(u => u.Id == id);
+        if (user == null)
+        {
+            return NotFound();
+        }
+        return View(user);
     }
 
     // Password validation method

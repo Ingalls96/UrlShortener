@@ -32,10 +32,6 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Account"
                                 asp-action="UserList">Users</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Account"
-                                asp-action="Create">Create</a>
-                        </li>
                         <ul class="navbar-nav ms-auto">
                             @if (User.Identity.IsAuthenticated)
                             {
@@ -44,7 +40,7 @@
 
                                 <li class="nav-item">
                                     <a class="navbar-text me-5"
-                                        href="@Url.Action("UserDetails", "User", new { id = userId })">Welcome,
+                                        href="@Url.Action("UserDetails", "Account", new { id = userId })">Welcome,
                                         @User.Identity.Name</a>
                                 </li>
                                 <li class="nav-item">
