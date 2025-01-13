@@ -1,4 +1,5 @@
 @model UrlShortener.Models.Identity.SiteUser
+@using UrlShortener.Models
 
 @{
     ViewData["Title"] = "UserDetails";
@@ -12,3 +13,14 @@
 <div>
     <strong>First Name: </strong> @Model.FirstName
 </div>
+
+
+@if (Model.Links.Any())
+{
+    <ul>
+        @foreach(var url in Model.Links)
+        {
+            <a href="@url.LongUrl" target="_blank">@url.ShortUrl</a>
+        }
+    </ul>
+}

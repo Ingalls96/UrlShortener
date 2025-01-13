@@ -1,9 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using UrlShortener.Models.Identity;
 namespace UrlShortener.Models;
 
 public class Url 
 {
-    public string? Id { get; set; }  // No Required attribute
+    public string? Id { get; set; }
 
     [Required]
     [Url]
@@ -14,4 +15,6 @@ public class Url
     public DateTime GeneratedDate { get; set; }
 
     public string? SiteUserId {get; set;}
+
+    public SiteUser SiteUser {get; set;}
 }

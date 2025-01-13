@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Text;
 using UrlShortener.Data;
 using Microsoft.EntityFrameworkCore;
+using UrlShortener.Models.Identity;
+using Microsoft.AspNetCore.Identity;
 
 namespace UrlShortener.Controllers;
 
@@ -13,10 +15,13 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
     private readonly MvcUrlContext _context;
 
-    public HomeController(ILogger<HomeController> logger, MvcUrlContext context)
+    private readonly UserManager<SiteUser> _userManager;
+
+    public HomeController(ILogger<HomeController> logger, MvcUrlContext context, UserManager<SiteUser> userManager)
     {
         _logger = logger;
         _context = context;
+        _userManager = userManager;
     }
 
     public IActionResult Index()
@@ -28,9 +33,8 @@ public class HomeController : Controller
     [HttpPost]
     public async Task<IActionResult> ShortenUrl(Url model)
     {
-        // Explicitly clear out Id and ShortUrl before processing
-        //model.Id = null;
-        //model.ShortUrl = null;
+
+        var user = await _userManager.GetUserAsync(User);
 
         // Log the ModelState validity
         _logger.LogInformation($"ModelState is valid: {ModelState.IsValid}");
@@ -53,6 +57,14 @@ public class HomeController : Controller
             model.Id = shortId;
             model.ShortUrl = $"https://short.ly/{model.Id}";
             model.GeneratedDate = DateTime.Now;
+            if (User.Identity.IsAuthenticated)
+            {
+                if(user != null)
+                {
+                    model.SiteUserId = user.Id;
+                    user.Links.Add(model);
+                }
+            }
 
             //Save URL to database
             _context.Add(model);

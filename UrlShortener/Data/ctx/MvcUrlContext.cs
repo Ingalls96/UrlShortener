@@ -23,18 +23,15 @@ namespace UrlShortener.Data
 
         public DbSet<UrlShortener.Models.Identity.SiteUser> SiteUser {get; set;}
 
-        // protected override void OnModelCreating(ModelBuilder model)
-        // {
-        //     base.OnModelCreating(model);
+        protected override void OnModelCreating(ModelBuilder model)
+        {
+            base.OnModelCreating(model);
 
-        //     model.Entity<IdentityUserRole<string>>()
-        //         .HasIndex(r => r.UserId)
-        //         .IsUnique(false);
-            
-        //     model.Entity<SiteUser>().HasData(
-        //         new SiteUser{Id = Guid.NewGuid().ToString(), Email = "Test@Test.com", FirstName = "Dummy", LastName = "DumDum", UserName = "testAccount"}
-        //     );
-                
-        // }
+            model.Entity<Url>()
+            .HasOne(u => u.SiteUser)
+            .WithMany(s => s.Links)
+            .HasForeignKey(u => u.SiteUserId)
+            .OnDelete(DeleteBehavior.Cascade);
+        }
     }
 }
