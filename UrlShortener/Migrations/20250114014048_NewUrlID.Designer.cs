@@ -11,8 +11,8 @@ using UrlShortener.Data;
 namespace UrlShortener.Migrations
 {
     [DbContext(typeof(MvcUrlContext))]
-    [Migration("20250107000739_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250114014048_NewUrlID")]
+    partial class NewUrlID
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -297,9 +297,12 @@ namespace UrlShortener.Migrations
 
             modelBuilder.Entity("UrlShortener.Models.Url", b =>
                 {
-                    b.HasOne("UrlShortener.Models.Identity.SiteUser", null)
+                    b.HasOne("UrlShortener.Models.Identity.SiteUser", "SiteUser")
                         .WithMany("Links")
-                        .HasForeignKey("SiteUserId");
+                        .HasForeignKey("SiteUserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("SiteUser");
                 });
 
             modelBuilder.Entity("UrlShortener.Models.Identity.SiteUser", b =>

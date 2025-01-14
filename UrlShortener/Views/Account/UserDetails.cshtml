@@ -20,7 +20,11 @@
     <ul>
         @foreach(var url in Model.Links)
         {
-            <a href="@url.LongUrl" target="_blank">@url.ShortUrl</a>
+            if(url.SiteUserId == Model.Id)
+            {
+                <p>Success!</p>
+                <a href="@url.LongUrl" target="_blank">@url.ShortUrl</a>
+            }
         }
     </ul>
 }

@@ -6,9 +6,6 @@ namespace UrlShortener.Models.Identity
 {
     public class SiteUser : IdentityUser
     {
-        [Key]
-        public override string Id {get; set;}
-
         [Required]
         [EmailAddress]
         public override string? Email {get; set;}

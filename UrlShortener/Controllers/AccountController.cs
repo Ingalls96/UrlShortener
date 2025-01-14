@@ -27,7 +27,7 @@ public class AccountController : Controller
 
     public async Task<IActionResult> UserList()
     {
-        List<SiteUser> userList = await _context.SiteUser.ToListAsync<SiteUser>();
+        List<SiteUser> userList = await _context.Users.ToListAsync<SiteUser>();
         return View(userList);
     }
 
@@ -57,6 +57,7 @@ public class AccountController : Controller
                     return View(newUser);
                 }
 
+                newUser.Id = Guid.NewGuid().ToString();
                 var result = await _userManager.CreateAsync(newUser, password);
 
                 if (result.Succeeded)

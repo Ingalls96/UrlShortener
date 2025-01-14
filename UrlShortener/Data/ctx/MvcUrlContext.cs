@@ -18,10 +18,7 @@ namespace UrlShortener.Data
             : base(options)
         {
         }
-
-        public DbSet<UrlShortener.Models.Url> Url {get; set;}
-
-        public DbSet<UrlShortener.Models.Identity.SiteUser> SiteUser {get; set;}
+        public DbSet<Url> Url {get; set;}
 
         protected override void OnModelCreating(ModelBuilder model)
         {

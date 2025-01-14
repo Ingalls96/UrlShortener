@@ -294,9 +294,12 @@ namespace UrlShortener.Migrations
 
             modelBuilder.Entity("UrlShortener.Models.Url", b =>
                 {
-                    b.HasOne("UrlShortener.Models.Identity.SiteUser", null)
+                    b.HasOne("UrlShortener.Models.Identity.SiteUser", "SiteUser")
                         .WithMany("Links")
-                        .HasForeignKey("SiteUserId");
+                        .HasForeignKey("SiteUserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("SiteUser");
                 });
 
             modelBuilder.Entity("UrlShortener.Models.Identity.SiteUser", b =>
