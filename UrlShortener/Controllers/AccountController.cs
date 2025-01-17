@@ -126,6 +126,7 @@ public class AccountController : Controller
         }
 
         var user = await _context.Users
+            .Include(u => u.Links)
             .FirstOrDefaultAsync(u => u.Id == id);
         if (user == null)
         {
