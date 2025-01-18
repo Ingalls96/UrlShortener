@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4QZJTeNyFEuV2iz2SQp3SocoSfu5nj8uljT+4iw3vBE=",
+  "Hash": "s3KG2Bq8GtlZ3ig+NqF9rYrDfPa6UxGs6h1wtBM2g+A=",
   "Source": "UrlShortener",
   "BasePath": "_content/UrlShortener",
   "Mode": "Default",
@@ -731,12 +731,12 @@
       "OriginalItemSpec": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\wwwroot\\lib\\jquery-validation-unobtrusive\\dist\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-0kj2jxf9pr.gz",
+      "Identity": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-p6ws98aqlu.gz",
       "SourceId": "UrlShortener",
       "SourceType": "Discovered",
       "ContentRoot": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/UrlShortener",
-      "RelativePath": "css/site#[.{fingerprint=0kj2jxf9pr}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=p6ws98aqlu}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -745,8 +745,8 @@
       "RelatedAsset": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "9nn7u9ql35",
-      "Integrity": "iwpAqPsmuD7e1t14S8+vcwSv6ycjzqPZ2gL4O+6k03Y=",
+      "Fingerprint": "0m0ffasv85",
+      "Integrity": "2Acxnx44QftGrHdhnZRktzWapK0wQ8Y003S95ippEIQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\wwwroot\\css\\site.css"
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "0kj2jxf9pr",
-      "Integrity": "gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM=",
+      "Fingerprint": "p6ws98aqlu",
+      "Integrity": "8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2728,13 +2728,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.0kj2jxf9pr.css",
-      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-0kj2jxf9pr.gz",
+      "Route": "css/site.css",
+      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-p6ws98aqlu.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001572327044"
+          "Quality": "0.001443001443"
         }
       ],
       "ResponseHeaders": [
@@ -2744,19 +2744,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "635"
+          "Value": "692"
         },
         {
           "Name": "ETag",
-          "Value": "\"iwpAqPsmuD7e1t14S8+vcwSv6ycjzqPZ2gL4O+6k03Y=\""
+          "Value": "\"2Acxnx44QftGrHdhnZRktzWapK0wQ8Y003S95ippEIQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 23:21:15 GMT"
+          "Value": "Sat, 18 Jan 2025 00:19:21 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2772,26 +2772,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM=\""
+          "Value": "W/\"8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "0kj2jxf9pr"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM="
+          "Value": "sha256-8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c="
         }
       ]
     },
     {
-      "Route": "css/site.0kj2jxf9pr.css",
+      "Route": "css/site.css",
       "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2801,7 +2793,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1748"
+          "Value": "1880"
         },
         {
           "Name": "Content-Type",
@@ -2809,11 +2801,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM=\""
+          "Value": "\"8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 23:21:15 GMT"
+          "Value": "Sat, 18 Jan 2025 00:19:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-p6ws98aqlu.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "692"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Acxnx44QftGrHdhnZRktzWapK0wQ8Y003S95ippEIQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Jan 2025 00:19:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Acxnx44QftGrHdhnZRktzWapK0wQ8Y003S95ippEIQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.p6ws98aqlu.css",
+      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-p6ws98aqlu.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001443001443"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "692"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Acxnx44QftGrHdhnZRktzWapK0wQ8Y003S95ippEIQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Jan 2025 00:19:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "p6ws98aqlu"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.p6ws98aqlu.css",
+      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1880"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 18 Jan 2025 00:19:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2823,7 +2960,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "0kj2jxf9pr"
+          "Value": "p6ws98aqlu"
         },
         {
           "Name": "label",
@@ -2831,13 +2968,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM="
+          "Value": "sha256-8XqmtjO1xCV/gJFUb92goRVg9sl7pKtS3+c4R3RES3c="
         }
       ]
     },
     {
-      "Route": "css/site.0kj2jxf9pr.css.gz",
-      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-0kj2jxf9pr.gz",
+      "Route": "css/site.p6ws98aqlu.css.gz",
+      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-p6ws98aqlu.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2846,7 +2983,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "635"
+          "Value": "692"
         },
         {
           "Name": "Content-Type",
@@ -2854,11 +2991,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"iwpAqPsmuD7e1t14S8+vcwSv6ycjzqPZ2gL4O+6k03Y=\""
+          "Value": "\"2Acxnx44QftGrHdhnZRktzWapK0wQ8Y003S95ippEIQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 23:21:15 GMT"
+          "Value": "Sat, 18 Jan 2025 00:19:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2876,7 +3013,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "0kj2jxf9pr"
+          "Value": "p6ws98aqlu"
         },
         {
           "Name": "label",
@@ -2884,144 +3021,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-iwpAqPsmuD7e1t14S8+vcwSv6ycjzqPZ2gL4O+6k03Y="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-0kj2jxf9pr.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001572327044"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "635"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iwpAqPsmuD7e1t14S8+vcwSv6ycjzqPZ2gL4O+6k03Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 23:21:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1748"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 23:21:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gOnQ1XK6ZQuywP8WUX2+TcLj8l5sEDNw6t2acR0POBM="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\obj\\Debug\\net9.0\\compressed\\ieigs3r9h7-0kj2jxf9pr.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "635"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"iwpAqPsmuD7e1t14S8+vcwSv6ycjzqPZ2gL4O+6k03Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 11 Jan 2025 23:21:15 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-iwpAqPsmuD7e1t14S8+vcwSv6ycjzqPZ2gL4O+6k03Y="
+          "Value": "sha256-2Acxnx44QftGrHdhnZRktzWapK0wQ8Y003S95ippEIQ="
         }
       ]
     },
@@ -21310,7 +21310,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21371,7 +21371,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21416,7 +21416,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21471,7 +21471,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21532,7 +21532,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21577,7 +21577,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21632,7 +21632,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21685,7 +21685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21722,7 +21722,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21769,7 +21769,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21822,7 +21822,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21859,7 +21859,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 14 Jan 2025 01:28:17 GMT"
+          "Value": "Sat, 18 Jan 2025 00:45:06 GMT"
         },
         {
           "Name": "Cache-Control",

@@ -22,8 +22,10 @@
         {
             if(url.SiteUserId == Model.Id)
             {
-                <p>Success!</p>
-                <a href="@url.LongUrl" target="_blank">@url.ShortUrl</a>
+                <div class="parent-text">
+                    <p>@url.UrlName</p>
+                    <a href="@url.LongUrl" target="_blank">@url.ShortUrl</a>
+                </div>
             }
         }
     </ul>

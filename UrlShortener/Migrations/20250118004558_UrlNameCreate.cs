@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UrlShortener.Migrations
 {
     /// <inheritdoc />
-    public partial class NewUrlID : Migration
+    public partial class UrlNameCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -166,7 +166,8 @@ namespace UrlShortener.Migrations
                     LongUrl = table.Column<string>(type: "TEXT", nullable: false),
                     ShortUrl = table.Column<string>(type: "TEXT", nullable: true),
                     GeneratedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    SiteUserId = table.Column<string>(type: "TEXT", nullable: true)
+                    SiteUserId = table.Column<string>(type: "TEXT", nullable: true),
+                    UrlName = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

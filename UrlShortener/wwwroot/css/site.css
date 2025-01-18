@@ -106,3 +106,11 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.parent-text{
+  display: flex;
+  flex-direction: row;
+  justify-content:baseline;
+  align-items: center;
+  width: 150px;
+}

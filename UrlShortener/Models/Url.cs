@@ -17,4 +17,6 @@ public class Url
     public string? SiteUserId {get; set;}
 
     public SiteUser SiteUser {get; set;}
+
+    public string? UrlName {get; set;}
 }

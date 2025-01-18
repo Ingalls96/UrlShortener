@@ -7,6 +7,7 @@ using UrlShortener.Data;
 using Microsoft.EntityFrameworkCore;
 using UrlShortener.Models.Identity;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 namespace UrlShortener.Controllers;
 
@@ -57,6 +58,7 @@ public class HomeController : Controller
             model.Id = shortId;
             model.ShortUrl = $"https://short.ly/{model.Id}";
             model.GeneratedDate = DateTime.Now;
+            model.UrlName = model.UrlName;
             if (User.Identity.IsAuthenticated)
             {
                 if(user != null)

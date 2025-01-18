@@ -11,8 +11,8 @@ using UrlShortener.Data;
 namespace UrlShortener.Migrations
 {
     [DbContext(typeof(MvcUrlContext))]
-    [Migration("20250114014048_NewUrlID")]
-    partial class NewUrlID
+    [Migration("20250118004558_UrlNameCreate")]
+    partial class UrlNameCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -235,6 +235,9 @@ namespace UrlShortener.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("SiteUserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UrlName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

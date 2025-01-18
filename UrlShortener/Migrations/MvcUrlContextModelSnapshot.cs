@@ -234,6 +234,9 @@ namespace UrlShortener.Migrations
                     b.Property<string>("SiteUserId")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("UrlName")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.HasIndex("SiteUserId");
