@@ -1,0 +1,19 @@
+@model UrlShortener.Models.Identity.SiteUser
+
+@{
+    ViewData["Title"] = "Delete User";
+}
+
+<h1>Delete User</h1>
+
+<h3>Are you sure you want to delete this user?</h3>
+<div>
+    <h4>@Model.FirstName @Model.LastName (@Model.UserName)</h4>
+    <p>Email: @Model.Email</p>
+    <p><strong>This action cannot be undone.</strong></p>
+</div>
+
+<form method="post" asp-action="Delete" asp-route-id="@Model.Id">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("UserList", "Account")" class="btn btn-secondary">Cancel</a>
+</form>

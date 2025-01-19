@@ -62,7 +62,7 @@ public class AccountController : Controller
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction(nameof(UserList));
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -135,10 +135,38 @@ public class AccountController : Controller
         return View(user);
     }
 
-    // public Task<IActionResult> Delete(SiteUser deleteUser)
-    // {
-    //     return null;
-    // }
+    //DELETE USER FUNCTION - Get user info
+    public async Task<IActionResult> Delete(string id)
+    {
+        var user = await _context.Users.FindAsync(id);
+        if (user == null)
+        {
+            return NotFound();
+        }
+        return View(user);
+    }
+
+    //DELETE USER FUNCTION - Deletion of user
+
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> DeleteConfirmed(string id)
+    {
+        if (string.IsNullOrEmpty(id))
+        {
+            return Redirect("/Account/UserList");
+        }
+        var user = await _context.Users.FindAsync(id);
+        if (user == null)
+        {
+            return NotFound();
+        }
+
+        _context.Users.Remove(user);
+        await _context.SaveChangesAsync();
+
+        return Redirect("/Account/UserList");
+    }
 
     // Password validation method
     private (bool IsValid, List<string> Errors) ValidatePassword(string password)
