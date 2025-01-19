@@ -135,6 +135,11 @@ public class AccountController : Controller
         return View(user);
     }
 
+    // public Task<IActionResult> Delete(SiteUser deleteUser)
+    // {
+    //     return null;
+    // }
+
     // Password validation method
     private (bool IsValid, List<string> Errors) ValidatePassword(string password)
     {
