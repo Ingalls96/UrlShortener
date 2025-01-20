@@ -50,7 +50,7 @@
                 @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
-                <a href="@Url.Action("Delete", "Account", new {id = item.Id })">Delete |</a>
+                <a href="@Url.Action("Delete", "Account",  new {id = item.Id })">Delete |</a>
                 <a href="@Url.Action("UserDetails", "Account", new { id = item.Id })">Details</a>
             </td>
         </tr>

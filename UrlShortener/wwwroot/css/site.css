@@ -110,3 +110,9 @@ body {
 .parent-text{
   width: 100px;
 }
+
+.Url-Display{
+  display: flex;
+  justify-content: flex-start;
+  margin: 50px;
+}

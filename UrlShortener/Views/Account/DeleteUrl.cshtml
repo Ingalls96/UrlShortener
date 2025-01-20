@@ -1,0 +1,19 @@
+@model UrlShortener.Models.Url
+
+@{
+    ViewData["Title"] = "Delete Url";
+}
+
+<h1>Delete Url</h1>
+
+<h3>Are you sure you want to delete this Url?</h3>
+<div>
+    <h4>@Model.UrlName</h4>
+    <h4>@Model.ShortUrl</h4>
+    <p><strong>This action cannot be undone.</strong></p>
+</div>
+
+<form method="post" asp-action="DeleteUrlConfirmed" asp-route-urlId="@Model.Id">
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("UserList", "Account")" class="btn btn-secondary">Cancel</a>
+</form>

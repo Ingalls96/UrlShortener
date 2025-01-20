@@ -168,6 +168,36 @@ public class AccountController : Controller
         return Redirect("/Account/UserList");
     }
 
+    //DELETEURL - Grabs the Url requested by the user to delete
+    public async Task<IActionResult> DeleteUrl(string urlId)
+    {
+        var url = await _context.Url.FindAsync(urlId);
+        if(url == null)
+        {
+            return Redirect("/Account/UserList");
+        }
+        return View(url);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> DeleteUrlConfirmed(string urlId)
+    {
+        if (string.IsNullOrEmpty(urlId))
+        {
+            return Redirect("/Account/UserList");
+        }
+        var url = await _context.Url.FindAsync(urlId);
+        if (url == null)
+        {
+            return NotFound();
+        }
+
+        _context.Url.Remove(url);
+        await _context.SaveChangesAsync();
+
+        return Redirect("/Home/Index");
+    }
+
     // Password validation method
     private (bool IsValid, List<string> Errors) ValidatePassword(string password)
     {
