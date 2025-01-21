@@ -18,7 +18,6 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Anthony's Url Shortener</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,15 +41,13 @@
                                 var userId = user?.Id;
 
                                 <li class="nav-item">
-                                    <a class="navbar-text me-5"
+                                    <a class="welcome-user"
                                         href="@Url.Action("UserDetails", "Account", new { id = userId })">Welcome,
                                         @User.Identity.Name</a>
                                 </li>
                                 <li class="nav-item">
-                                    <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
-                                        @Html.AntiForgeryToken()
-                                        <button type="submit" class="nav-link btn btn-login">Logout</button>
-                                    </form>
+                                    @* <a href="@Url.Action("Logout", "Account")" class="nav-link btn btn-login">Logout</a> *@
+                                    <a class="nav-link btn btn-login" asp-action="Logout" asp-controller="Account">Logout</a>
                                 </li>
                             }
                             else
@@ -81,6 +78,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+    
 </body>
 
 </html>

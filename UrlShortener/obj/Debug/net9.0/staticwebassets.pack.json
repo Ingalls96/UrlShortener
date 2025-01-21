@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\wwwroot\\images\\background-pic.jpg",
+      "PackagePath": "staticwebassets\\images\\background-pic.jpg"
+    },
+    {
       "Id": "c:\\Users\\Ingal\\OneDrive\\Desktop\\Dev\\ASP.NET\\UrlShortener\\UrlShortener\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -10,13 +10,28 @@ html {
 
 .navbar
 {
-  background-color: #ed8793 !important;
-  border-color: black !important; 
+  background-color: rgba(0, 0, 0, 0) !important;
+  /* background-color: #ed8793 !important; */
+  border-color: black !important;
+  position: relative !important;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 10px; /* Optional: add space between nav items */
 }
 
 .navbar-brand, .nav-link
 {
-  color: black !important;
+  color: white !important;
+}
+
+.welcome-user{
+}
+
+.log-button{
+  position: fixed;
+  right: 10em;
+  /* margin-top: 0em; */
 }
 
 .form-control,.form-control:focus
@@ -35,10 +50,24 @@ html {
 25282B - dark gray
 FFFFFFD- light gray text color */
 
-body, div.container
+body {
+  background-image: url('/images/background-pic.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* div.container
 {
   color: #E6E6E6;
   background-color: #25282b;
+} */
+
+.Clear-Div{
+  background-color: rgba(0, 0, 0, 0);
+  color: #E6E6E6;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  float: left;
 }
 
 form
@@ -46,6 +75,15 @@ form
   background-color: #2e3236;
   border-color: black;
   height: 20em;
+  width: 45em;
+  float: right;
+  right: 10em;
+  margin-top: 8em;
+  position: fixed;
+}
+
+.form-control, .form-control:focus{
+  width: 30em;
 }
 
 h4
@@ -85,9 +123,9 @@ h4
   border-color: #4ECDC4;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus,.form-control:focus, .form-check-input:focus {
+/* .btn:focus, .btn:active:focus, .btn-link.nav-link:focus,.form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+} */
 
 html {
   position: relative;
@@ -98,14 +136,14 @@ body {
   margin-bottom: 60px;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+/* .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
   color: var(--bs-secondary-color);
   text-align: end;
-}
+} */
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+/* .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
-}
+} */
 
 .parent-text{
   width: 100px;
