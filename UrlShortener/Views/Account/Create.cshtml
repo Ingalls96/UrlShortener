@@ -9,23 +9,23 @@
 <form class="User-Box" asp-action="Create">
     <div class="form-group">
         <label for="FirstName">First Name</label>
-        <input type="text" class="form-control" id="FirstName" name="FirstName" value="@Model.FirstName" required />
+        <input type="text" class="form-control-create" id="FirstName" name="FirstName" value="@Model.FirstName" required />
     </div>
     <div class="form-group">
         <label for="LastName">Last Name</label>
-        <input type="text" class="form-control" id="LastName" name="LastName" value="@Model.LastName" required />
+        <input type="text" class="form-control-create" id="LastName" name="LastName" value="@Model.LastName" required />
     </div>
     <div class="form-group">
         <label for="UserName">Username</label>
-        <input type="text" class="form-control" id="UserName" name="UserName" value="@Model.UserName" required />
+        <input type="text" class="form-control-create" id="UserName" name="UserName" value="@Model.UserName" required />
     </div>
     <div class="form-group">
         <label for="Email">Email</label>
-        <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" required />
+        <input type="email" class="form-control-create" id="Email" name="Email" value="@Model.Email" required />
     </div>
     <div class="form-group">
         <label for="Password">Password</label>
-        <input type="password" class="form-control" id="Password" name="Password" required />
+        <input type="password" class="form-control-create" id="Password" name="Password" required />
         @if (ViewData.ModelState["Password"]?.Errors.Any() == true)
         {
             <div class="text-danger">
@@ -58,6 +58,7 @@
             document.getElementById('password-error').innerText = message;
         });
     </script>
-
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <div class="center-button">
+        <button type="submit" class="btn btn-primary">Create!</button>
+    </div>
 </form>

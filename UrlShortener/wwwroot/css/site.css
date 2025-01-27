@@ -36,7 +36,7 @@ html {
   /* margin-top: 0em; */
 }
 
-.form-control,.form-control:focus
+.form-control,.form-control:focus, .form-control-create, .form-control-login
 {
   display: block;
   margin-left: auto;
@@ -45,7 +45,19 @@ html {
   /* background: #E6E6E6; */
   background: rgba(145, 145, 145, 0.2);
   border-color: black;
-  color: black;
+  color: white;
+}
+
+.form-control-create{
+  width: 20em;
+  margin-right: 7em;
+  margin-top: 1em;
+}
+
+.form-control-login{
+  width: 20em;
+  margin-right: 7em;
+  margin-top: 2em;
 }
 
 /* ee7381 - salmon
@@ -95,16 +107,21 @@ form
 
 .form-control, .form-control:focus{
   width: 30em;
-  color: black;
+  color: white;
 }
 
-h1{
-  color: white;
+h1,h2{
+  color: rgb(111, 139, 212);
   margin-top: 1em;
 }
 
 label,strong,div{
   color: white;
+}
+
+label{
+  position: fixed;
+  margin-left: 6em;
 }
 
 table,thead,tr,th,td{
@@ -145,11 +162,18 @@ h4
   background: rgba(192, 229, 250, 0.5);
   border-color: rgba(192, 229, 250, 0);
 }
+
 .btn:hover
 {
   color: black;
   background: #4ECDC4;
   border-color: #4ECDC4;
+}
+
+.center-button{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 /* .btn:focus, .btn:active:focus, .btn-link.nav-link:focus,.form-control:focus, .form-check-input:focus {
@@ -178,8 +202,23 @@ footer{
   text-align: start;
 } */
 
+.delete-box{
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
 .parent-text{
   width: 100px;
+}
+
+.a-create{
+  margin-top: 1em;
+}
+
+.Url-Table{
+  max-height: 506px;
+  overflow-y: auto;
+  padding-right: 1px;
 }
 
 .Url-Display{
@@ -194,7 +233,18 @@ footer{
 }
 
 .User-Box{
-  
+  position: fixed;
+  right: 17em;
+  margin-top: -4.5em;
+}
+
+.User-Box-Login{
+  float: right;
+  position: fixed;
+  right: 17em;
+  margin-top: -4.5em;
+  height: auto;
+  min-height: 15em;
 }
 
 

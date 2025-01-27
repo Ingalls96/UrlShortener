@@ -195,7 +195,7 @@ public class AccountController : Controller
         _context.Url.Remove(url);
         await _context.SaveChangesAsync();
 
-        return Redirect("/Home/Index");
+        return RedirectToAction("UserDetails", "Account", new {id = url.SiteUserId});
     }
 
     // Password validation method

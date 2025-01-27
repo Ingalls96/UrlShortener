@@ -13,7 +13,7 @@
     <p><strong>This action cannot be undone.</strong></p>
 </div>
 
-<form method="post" asp-action="DeleteUrlConfirmed" asp-route-urlId="@Model.Id">
+<form class="delete-box" method="post" asp-action="DeleteUrlConfirmed" asp-route-urlId="@Model.Id">
     <button type="submit" class="btn btn-danger">Delete</button>
-    <a href="@Url.Action("UserList", "Account")" class="btn btn-secondary">Cancel</a>
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='@Url.Action("UserDetails", "Account", new { id = Model.SiteUserId })'">Cancel</button>
 </form>
