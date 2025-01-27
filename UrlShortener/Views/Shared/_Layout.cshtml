@@ -46,8 +46,7 @@
                                         @User.Identity.Name</a>
                                 </li>
                                 <li class="nav-item">
-                                    @* <a href="@Url.Action("Logout", "Account")" class="nav-link btn btn-login">Logout</a> *@
-                                    <a class="nav-link btn btn-login" asp-action="Logout" asp-controller="Account">Logout</a>
+                                    <a href="javascript:void(0);" class="nav-link btn btn-login" id="logoutButton">Logout</a>
                                 </li>
                             }
                             else
@@ -70,16 +69,15 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Anthony's Url Shortener</s>
-        </div>
+            <p class="footer-class">&copy; 2025 - <a class="footer-button" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
     </footer>
+
+    @Html.AntiForgeryToken()
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 
-    
 </body>
 
 </html>

@@ -6,9 +6,9 @@
 <div class="Clear-Div">
     <h1>ShrinkRL</h1>
 </div>
-<div class="text-center">
+<div class="UrlShortener-Box">
     <form method="Post" action="/Home/ShortenUrl">
-        <h1 for="LongUrl">Shorten Url Here: </h1>
+        <h1 class="UrlShortener-Box" for="LongUrl">Shorten Url Here: </h1>
         <div>
             @if (User.Identity.IsAuthenticated)
             {   
@@ -25,5 +25,9 @@
             <p>Shortened Url: <a href="@Model.LongUrl" target="_blank">@Model.ShortUrl</a></p>
         }
         </h4>
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <p>New User? Register <a href="Account/Create/Create">Here</a></p>
+        }
     </form>
 </div>

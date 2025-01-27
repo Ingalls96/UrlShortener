@@ -30,6 +30,11 @@ public class HomeController : Controller
         return View(new Url());
     }
 
+    public IActionResult Privacy()
+    {
+        return View();
+    }
+
     //Post URL
     [HttpPost]
     public async Task<IActionResult> ShortenUrl(Url model)
