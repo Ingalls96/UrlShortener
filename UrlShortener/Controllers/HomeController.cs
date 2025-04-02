@@ -13,7 +13,7 @@ namespace UrlShortener.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<HomeController> _logger; //use this for logging errors in the controller
     private readonly MvcUrlContext _context;
 
     private readonly UserManager<SiteUser> _userManager;

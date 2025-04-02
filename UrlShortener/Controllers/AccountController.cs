@@ -13,9 +13,11 @@ using Microsoft.AspNetCore.Authorization;
 namespace UrlShortener.Controllers;
 public class AccountController : Controller
 {
+    //UserManager and SignInManager member variables to access AccountController constructor
     private readonly UserManager<SiteUser> _userManager;
     private readonly SignInManager<SiteUser> _signInManager;
 
+    //MvcUrlContext variable used for database connections in the controller
     private MvcUrlContext _context;
 
     public AccountController(UserManager<SiteUser> userManager, SignInManager<SiteUser> signInManager, MvcUrlContext context)
@@ -24,7 +26,7 @@ public class AccountController : Controller
         _signInManager = signInManager;
         _context = context;
     }
-
+    //UserList grabs list of users from database
     public async Task<IActionResult> UserList()
     {
         List<SiteUser> userList = await _context.Users.ToListAsync<SiteUser>();

@@ -2,6 +2,8 @@ using System.ComponentModel.DataAnnotations;
 using UrlShortener.Models.Identity;
 namespace UrlShortener.Models;
 
+
+//Url is the object used to create the URLS as well as the shortened version of the URLs on the web app
 public class Url 
 {
     public string? Id { get; set; }

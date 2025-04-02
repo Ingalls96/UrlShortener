@@ -6,6 +6,7 @@ namespace BlogApp.Data.Config
 
     public static class AuthConfig
     {
+        //Admin class will be an admin account automatically created if one is not already created in the database
         internal static class Admin
         {
             public const string userName = "admin";
@@ -17,6 +18,7 @@ namespace BlogApp.Data.Config
             public static SiteUser SiteUserObject() => new SiteUser {UserName = userName, FirstName = "root", LastName = "default-admin-account", Email = email};
         }
 
+        //ConfigAdmin takes the Admin account created about and adds it to the database
         public static async Task ConfigAdmin(IServiceProvider provider)
         {
             var roleManager = provider.GetRequiredService<RoleManager<IdentityRole>>();

@@ -12,6 +12,8 @@ using UrlShortener.Models.Identity;
 
 namespace UrlShortener.Data
 {
+
+    //MvcUrlContext is a custom Identity context used for connected the webapp to the database on model creation
     public class MvcUrlContext : IdentityDbContext<SiteUser>
     {
         public MvcUrlContext (DbContextOptions<MvcUrlContext> options)
